@@ -1,0 +1,6 @@
+if SHIELD_LEARNING
+
+config ZMK_KEYBOARD_NAME
+    default "learning"
+
+endif # SHIELD_LEARNING
