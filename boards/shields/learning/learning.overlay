@@ -4,22 +4,22 @@
         zmk,matrix_transform = &matrix_transform0;
     };
 
- kscan0: kscan0 {
-    compatible = "zmk,kscan-gpio-matrix";
-    diode-direction = "col2row";
+    kscan0: kscan0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
 
-    row-gpios = <
-        &gpio0 2 GPIO_ACTIVE_LOW
-        &gpio0 3 GPIO_ACTIVE_LOW
-        &gpio0 4 GPIO_ACTIVE_LOW
-    >;
+        row-gpios = <
+            &gpio0 2 GPIO_ACTIVE_LOW
+            &gpio0 3 GPIO_ACTIVE_LOW
+            &gpio0 4 GPIO_ACTIVE_LOW
+        >;
 
-    col-gpios = <
-        &gpio0 5 GPIO_ACTIVE_LOW
-        &gpio0 6 GPIO_ACTIVE_LOW
-        &gpio0 7 GPIO_ACTIVE_LOW
-    >;
-};
+        col-gpios = <
+            &gpio0 5 GPIO_ACTIVE_LOW
+            &gpio0 6 GPIO_ACTIVE_LOW
+            &gpio0 7 GPIO_ACTIVE_LOW
+        >;
+    };
 
     matrix_transform0: matrix_transform {
         compatible = "zmk,matrix-transform";
@@ -27,9 +27,9 @@
         columns = <3>;
 
         map = <
-            RC(0,0) RC(0,1) RC(0,2)
-            RC(1,0) RC(1,1) RC(1,2)
-            RC(2,0) RC(2,1) RC(2,2)
+            0 1 2
+            3 4 5
+            6 7 8
         >;
     };
 };
